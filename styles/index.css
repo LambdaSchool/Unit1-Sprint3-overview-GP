@@ -1,0 +1,221 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*universal reset*/
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin:0;
+    max-width:100%;
+    border:1px solid grey;
+}
+/*General Styles*/
+html{
+    font-size:62.5%;
+}
+body{
+    font-size:1.6rem;
+    line-height:2;
+    font-family: 'Rajdhani', sans-serif;
+}
+section{
+    padding:4% 0;
+}
+h1, h2, h3, h4{
+    color:#AF6329;
+    text-align:center;
+    font-family: 'Hind Guntur', sans-serif;
+}
+h1{
+    font-size:5rem;
+    text-align:left;
+    color:#AF6329;
+    margin-left:10%;
+}
+h2{
+    font-size:3rem;
+}
+h3, h4{
+    font-size:2.5rem;
+}
+a{
+    text-decoration:none;
+    color: #000;
+    transition:2s;
+    font-family: 'Hind Guntur', sans-serif;
+}
+a:hover{
+    text-decoration:underline;
+}
+button{
+    font-size:2rem;
+    font-family: 'Rajdhani', sans-serif;
+    border:3px solid #AF6329;
+    color:#AF6329;
+    padding:2% 3%;
+    background-color:transparent;
+    transition:2s;
+}
+input{
+    border:3px solid #AF6329;
+    font-family: 'Rajdhani', sans-serif; 
+    color:#AF6329;
+}
+button:hover{
+    background-color:#AF6329;
+    color:#fff;
+}
+/*helper classes*/
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+} 
+/*Header Section Styles*/
+nav.main{
+    padding:1% 0;
+    display:flex;
+    justify-content: space-between;
+    position:fixed;
+    align-items: center;
+    width:100%;
+    z-index:999;
+    background-color:rgba(175,99,41,0.6);
+}
+.logo{
+    width:10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width:40%;
+}
+.links{
+    width:60%;
+    display:flex;
+    justify-content: space-evenly;
+}
+/*Home section styles*/
+#home{
+    height:90vh;
+    background-image:url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*About Section Styles*/
+#about .container div{
+    width:45%;
+    padding:4%;
+}
+.hero-img{
+    background-image: url('../images/hero.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:50vh;
+    background-position: center;
+}
+/*Studio section styles*/
+#studio img{
+    width:33%;
+}
+/*Classes Section Styles*/
+.search{
+    width:50%;
+    display:flex;
+    align-items: center;
+}
+.search button{
+    width:20%;
+}
+.search input{
+    width:70%;
+    padding:1%;
+    height:5vh;
+}
+/*Membership Section Styles*/
+#join .container div{
+    width:50%;
+}
+.info{
+    padding:4%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+form{
+   
+    margin:0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info p{
+    margin-bottom:15%;
+}
+#first, #last, #level, #type{
+    width:45%;
+    margin:1% 0;
+    padding:1%;
+}
+#email, form button{
+    width:100%;
+    margin:1% 0;
+    padding:1%;
+}
+/*footer section styles*/
+footer{
+    background-color:#AF6329;
+    color:#fff;
+    display:flex;
+    justify-content: space-around;
+}
+footer div{
+    width:30%;
+}
+footer h3, footer a{
+    color:#fff;
+}
