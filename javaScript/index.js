@@ -18,3 +18,61 @@ const yogaClasses = [
 // advanced can do any class
 // intermediate can take intermediate, beginner or all levels
 // beginner can take beginner or all levels 
+
+function classByLevel(classArray, difficulty){
+    return classArray.filter(function(item){
+        if(difficulty === 'beginner'){
+            return item.type === 'beginner'
+        }
+        if(difficulty === 'intermediate'){
+            return item.type === 'beginner' || item.type === 'intermediate'
+        }
+        else {
+            return item
+        }
+    })
+}
+
+// function classCount(){
+//     return function(){
+//         if(this.attendance >= 5){
+//             console.log('You have no more classes left')
+//         }
+
+//         this.attendance++;
+//     }
+// }
+
+function attendClass(memberName, className, countCB){
+    return countCB() ? `${memberName} may attend ${className}. Their attended class count have been updated` : 
+    `${memberName} is at their class limit for the month and cannot join the ${className} class` 
+}
+
+// console.log(classByLevel(yogaClasses, 'intermediate'))
+
+class memberProfile {
+    constructor(name, level) {
+        this.name = name,
+        this.level = level,
+        this.attendance = 0
+    }
+
+    attendClass(){
+        if(this.attendance >= 5){
+            return false;
+        }
+        else {
+            this.attendance++;
+            return true;
+        }
+    }
+
+    allowedClasses(classesCB){  // closure function?
+        let classList = classesCB(yogaClasses, this.level).map(item => item.name)
+        return `${this.name} can attend the following classes: ${classList}`
+    }
+}
+
+let member1 = new memberProfile('Gabby', 'beginner');
+console.log(member1.allowedClasses(classByLevel));
+// console.log(attendClass(member1.name, 'Bikram', member1.attendClass)) // --> throwing error
