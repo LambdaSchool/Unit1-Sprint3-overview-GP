@@ -30,9 +30,8 @@ beforeSearch();
 // Step 1: Show Search results in HTML
 function searchResults() {
     let input = document.getElementById('searchBar');
-    input.innerHTML = "";
     let results = document.getElementById('searchResults');
-
+    results.innerHTML = "";
     /*end of starter code*/
     /*start of solution*/
     let resultHTML = yogaClasses.filter(function (item) {
@@ -69,8 +68,8 @@ function classByLevel(classArray, difficulty) { // makes this in the class! (pro
 //Step 6: create a function that will check --> skip until after member classes are made
 
 function attendClass(member, className) {
-    return member.attendClass() ? `${member.firstname} may attend ${className}. Their attended class count have been updated` :
-        `${member.firstname} is at their class limit for the month and cannot join the ${className} class`
+    return member.attendClass() ? `${member.firstName} may attend ${className}. Their attended class count have been updated` :
+        `${member.firstName} is at their class limit for the month and cannot join the ${className} class`
 }
 
 //Step 3: Create a class called memberProfile
