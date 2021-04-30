@@ -34,6 +34,7 @@ function searchResults() {
     results.innerHTML = "";
     /*end of starter code*/
     /*start of solution*/
+    // use class="menuTitles" for any headings used in created html
     let resultHTML = yogaClasses.filter(function (item) {
         return item.type === input.value.toLowerCase()
     }).reduce(function (acc, item) {
