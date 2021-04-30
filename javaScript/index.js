@@ -69,8 +69,8 @@ function classByLevel(classArray, difficulty) { // makes this in the class! (pro
 //Step 6: create a function that will check --> skip until after member classes are made
 
 function attendClass(member, className) {
-    return member.attendClass() ? `${member.name} may attend ${className}. Their attended class count have been updated` :
-        `${member.name} is at their class limit for the month and cannot join the ${className} class`
+    return member.attendClass() ? `${member.firstname} may attend ${className}. Their attended class count have been updated` :
+        `${member.firstname} is at their class limit for the month and cannot join the ${className} class`
 }
 
 //Step 3: Create a class called memberProfile
@@ -94,13 +94,13 @@ class MemberProfile {
 
     allowedClasses(classesCB) {  // closure function?
         let classList = classesCB(yogaClasses, this.level).map(item => item.name)
-        return `${this.name} can attend the following classes: ${classList}`
+        return `${this.firstName} can attend the following classes: ${classList}`
     }
 }
 
 //Step 4: Create a sub class is for intermediate
 class IntermediateMember extends MemberProfile {
-    constructor(firstName, lastName){
+    constructor(firstName, lastName) {
         super(firstName, lastName)
         this.level = 'intermediate'
     }
@@ -110,7 +110,7 @@ class IntermediateMember extends MemberProfile {
 // Step 5: sub sub is advanced
 
 class AdvancedMember extends IntermediateMember {
-    constructor(firstName, lastName){
+    constructor(firstName, lastName) {
         super(firstName, lastName)
         this.level = 'advanced'
     }
