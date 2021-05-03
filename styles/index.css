@@ -184,9 +184,11 @@ nav.main{
 }
 #searchResults{
     width:80%;
-    margin:0 auto;
+    margin:4% auto;
 }
-
+.closed{
+    text-align:center;
+}
 /*Membership Section Styles*/
 #join .container div{
     width:50%;
@@ -225,6 +227,7 @@ footer{
     color:#fff;
     display:flex;
     justify-content: space-around;
+    padding:2% 0;
 }
 footer div{
     width:30%;
