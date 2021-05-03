@@ -44,7 +44,7 @@ table {
     padding: 0;
     margin:0;
     max-width:100%;
-    border:1px solid grey;
+    /* border:1px solid grey; */
 }
 /*General Styles*/
 html{
@@ -165,6 +165,10 @@ nav.main{
     width:50%;
     display:flex;
     align-items: center;
+    margin:0 auto;
+}
+#searchBar{
+    margin-right:5%;
 }
 .search button{
     width:20%;
@@ -177,6 +181,10 @@ nav.main{
 .menuTitles{
     font-size:1.5rem;
     color:#AF6329;
+}
+#searchResults{
+    width:80%;
+    margin:0 auto;
 }
 
 /*Membership Section Styles*/
@@ -223,4 +231,11 @@ footer div{
 }
 footer h3, footer a{
     color:#fff;
+}
+nav.social{
+    display:flex;
+    justify-content: space-evenly;
+}
+.hours{
+    text-align:center;
 }
